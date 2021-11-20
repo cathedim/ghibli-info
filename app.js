@@ -21,16 +21,21 @@ request.onload = function () {
       const h2 =  document.createElement('h2');
       h2.textContent = movie.original_title;
 
-      const p = document.createElement('p');
-      movie.description = movie.description.substring(0, 300);
-      p.textContent = `${movie.description}...`;
+      const p1 = document.createElement('p');
+      p1.textContent = movie.release_date + ' • ' + movie.director;
+
+      const p2 = document.createElement('p');
+      //movie.description = movie.description.substring(0, 300);
+      //p.textContent = `${movie.description}...`;
+      p2.textContent = movie.description;
 
       container.appendChild(card);
 
       card.appendChild(img);
       cardText.appendChild(h1);
       cardText.appendChild(h2);
-      cardText.appendChild(p);
+      cardText.appendChild(p1);
+      cardText.appendChild(p2);
       card.appendChild(cardText);
     });
   }
