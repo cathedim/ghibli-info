@@ -23,11 +23,13 @@ request.onload = function () {
 
       const p1 = document.createElement('p');
       p1.textContent = movie.release_date + ' • ' + movie.director;
+      p1.setAttribute('class', 'extra');
 
       const p2 = document.createElement('p');
       //movie.description = movie.description.substring(0, 300);
       //p.textContent = `${movie.description}...`;
       p2.textContent = movie.description;
+      p2.setAttribute('class', 'description');
 
       container.appendChild(card);
 
@@ -55,8 +57,20 @@ const logo = document.createElement('img');
 logo.src = 'img/logo.png';
 logo.setAttribute('class', 'logo');
 
+const initialText = document.createElement('p');
+initialText.textContent = 'Studio Ghibli (1985) is a Japanese animation film studio best known for its animated feature films, and has also produced several short subjects, television commercials, and one television film. This is a useful guide to its movies and their information!';
+initialText.setAttribute('class', 'initialText');
+
+const hr = document.createElement('hr');
+
+const header = document.createElement('div');
+header.setAttribute('class', 'header');
+
 const container = document.createElement('div');
 container.setAttribute('class', 'container');
 
-app.appendChild(logo);
+header.appendChild(logo);
+header.appendChild(initialText);
+app.appendChild(header);
+app.appendChild(hr);
 app.appendChild(container);

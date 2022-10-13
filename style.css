@@ -1,9 +1,30 @@
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    width: 60%;
+    padding: 50px 0px;
+}
+
 .logo {
     width: 30%;
     height: 30%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    opacity: 0.7;
+}
+
+.initialText {
+    width: 60%;
+    margin: 0px;
+    padding: 55px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    color: #444444;
+}
+
+hr {
+    width: 40%;
+    color: lightgrey;
 }
 
 .container {
@@ -53,4 +74,16 @@ img {
 
 .card:hover img {
     opacity: 0.2;
+  }
+
+  .extra {
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  body {
+    background-image: linear-gradient(azure, paleturquoise);
   }
